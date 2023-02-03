@@ -11,7 +11,7 @@ namespace GlobalGameJam
         
         [SerializeField] private float speed = 2.0f;
         //[FormerlySerializedAs("playerTrans")]
-        [SerializeField] private Transform playerTransform;
+        [field: SerializeField] public Transform PlayerTransform { get; set; } = null;
         [SerializeField] private Vector2 _velocity;
         private Rigidbody2D _rb;
         void Awake()
@@ -22,7 +22,7 @@ namespace GlobalGameJam
         // Update is called once per frame
         void Update()
         {
-            Vector2 corbaxToTarget = playerTransform.position - transform.position;
+            Vector2 corbaxToTarget = PlayerTransform.position - transform.position;
             MoveToTarget(corbaxToTarget);
 			
             _velocity = Vector2.zero;

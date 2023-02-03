@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 7098776656414652705, guid: 9fe466b7cef42cc40ab0c0e1737217c3, type: 3}
   _velocity: {x: 0, y: 0}
 --- !u!50 &8641569713992341683
 Rigidbody2D:
