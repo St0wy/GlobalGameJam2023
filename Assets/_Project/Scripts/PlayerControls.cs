@@ -43,6 +43,7 @@ namespace GlobalGameJam
 			if (_canShoot)
 			{
 				_shouldShoot = true;
+				_canShoot = false;
 				_shootDirection = shootDirection;
 			}
 			else
@@ -69,8 +70,10 @@ namespace GlobalGameJam
 
 		private void Shoot(Vector2 direction)
 		{
+			if (direction.y <= 0f) return;
+			
 			_shouldShoot = false;
-
+			print("Test");
 			// TODO : Shot in the direction
 		}
 
