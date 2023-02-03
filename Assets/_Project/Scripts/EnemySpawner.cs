@@ -5,15 +5,20 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
+    [SerializeField] List<GameObject> _enemies = new List<GameObject>();
+    [SerializeField] float _spawnRate;
+    [SerializeField] Vector2 _spawnPos;
+    private float _x, _y;
+    
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemy());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator SpawnEnemy()
     {
-        
+        Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
+        yield return new WaitForSeconds(_spawnRate);
+        StartCoroutine(SpawnEnemy());
     }
 }
