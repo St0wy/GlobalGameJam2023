@@ -8,6 +8,7 @@ namespace GlobalGameJam
     public class EnemyMovement : MonoBehaviour
     {
         // Start is called before the first frame update
+        
         [SerializeField] private float speed = 2.0f;
         //[FormerlySerializedAs("playerTrans")]
         [SerializeField] private Transform playerTransform;
