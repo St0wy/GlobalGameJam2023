@@ -384,6 +384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 1
+  _projectilePrefab: {fileID: 0}
+  _timeToShotAgainInSeconds: 0.3
 --- !u!114 &645538962
 MonoBehaviour:
   m_ObjectHideFlags: 0

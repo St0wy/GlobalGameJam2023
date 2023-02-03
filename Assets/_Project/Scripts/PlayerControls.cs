@@ -9,27 +9,39 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _moveSpeed = 1f;
 
-		private Vector2 _input;
-		private Vector2 _shootDirection;
-		private bool _canShoot = true;
-		private bool _shouldShoot = false;
-		private Camera _mainCam;
+		[SerializeField]
+		private GameObject _projectilePrefab;
 
+		[SerializeField]
+		private float _timeToShotAgainInSeconds = 0.3f;
+
+		private Vector2 _moveDirection;
+		private Vector2 _shootDirection;
+		private Camera _mainCam;
+		private float _shootTimer;
+		private bool _mousePressed = false;
 
 		public Vector2 Input
 		{
-			get => _input;
+			get => _moveDirection;
 			set
 			{
-				_input = value;
-				if (_input.sqrMagnitude > _input.normalized.sqrMagnitude)
-					_input.Normalize();
+				_moveDirection = value;
+				if (_moveDirection.sqrMagnitude > _moveDirection.normalized.sqrMagnitude)
+					_moveDirection.Normalize();
 			}
 		}
+
+		private bool CanShoot => _shootTimer <= 0f;
 
 		private void Awake()
 		{
 			_mainCam = Camera.main;
+		}
+
+		private void Update()
+		{
+			_shootTimer -= Time.deltaTime;
 		}
 
 		private void OnMove(InputValue value)
@@ -37,52 +49,58 @@ namespace GlobalGameJam
 			Input = value.Get<Vector2>();
 		}
 
-		private void OnLook(InputValue value)
+		private void OnShoot(InputValue value)
 		{
-			Vector2 shootDirection = value.Get<Vector2>().normalized;
-			if (_canShoot)
+			_mousePressed = value.Get<float>() > 0f;
+			if (_mousePressed)
 			{
-				_shouldShoot = true;
-				_canShoot = false;
-				_shootDirection = shootDirection;
+				Vector2 playerToMouse = GetPlayerToMouseVec();
+				_shootDirection = playerToMouse.normalized;
 			}
 			else
 			{
-				if (shootDirection == Vector2.zero)
-				{
-					_canShoot = true;
-				}
+				_shootDirection = Vector2.zero;
 			}
 		}
 
-		private void OnShoot()
+		private void OnLook(InputValue value)
 		{
-			Vector2 pos = _mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-			Vector2 playerToMouse = pos - (Vector2) transform.position;
-			_shouldShoot = true;
-			_shootDirection = playerToMouse.normalized;
+			_shootDirection = value.Get<Vector2>();
 		}
 
 		private void FixedUpdate()
 		{
 			ApplyMovements();
+			HandleShoot();
+		}
+
+		private void HandleShoot()
+		{
+			if (!CanShoot || _shootDirection == Vector2.zero) return;
+
+			Shoot(_mousePressed ? GetPlayerToMouseVec().normalized : _shootDirection);
 		}
 
 		private void Shoot(Vector2 direction)
 		{
-			if (direction.y <= 0f) return;
-			
-			_shouldShoot = false;
-			print("Test");
-			// TODO : Shot in the direction
+			if (!_mousePressed)
+				_shootDirection = Vector2.zero;
+
+			_shootTimer = _timeToShotAgainInSeconds;
+			GameObject projectile = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+			var behaviour = projectile.GetComponent<ProjectileBehaviour>();
+			behaviour.Shoot(direction);
 		}
 
 		private void ApplyMovements()
 		{
-			if (_shouldShoot)
-				Shoot(_shootDirection);
-
 			// TODO : Move the player
+		}
+
+		private Vector2 GetPlayerToMouseVec()
+		{
+			Vector2 pos = _mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+			return pos - (Vector2) transform.position;
 		}
 	}
 }
