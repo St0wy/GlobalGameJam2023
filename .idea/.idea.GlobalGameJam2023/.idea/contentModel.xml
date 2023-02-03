@@ -10,8 +10,10 @@
           <e p="Prefabs" t="Include" />
           <e p="Scenes" t="Include" />
           <e p="Scripts" t="Include">
+            <e p="EnemyMovement.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
             <e p="PlayerControls.cs" t="Include" />
+            <e p="SeedBehaviour.cs" t="Include" />
             <e p="SeedSpawning.cs" t="Include" />
           </e>
           <e p="Settings" t="Include">

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4853b2f-e0bb-4339-a2fc-c44a5e10d707" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scripts/EnemySpawner.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d4853b2f-e0bb-4339-a2fc-c44a5e10d707" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +18,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/PlayerControls.cs" />
         <option value="$PROJECT_DIR$/Assets/_Project/Scripts/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Project/Scripts/EnemyMovement.cs" />
       </list>
     </option>
   </component>
@@ -42,9 +41,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -52,9 +50,8 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
-      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <list />
+        <set />
       </option>
       <method v="2" />
     </configuration>
@@ -67,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675454561561</updated>
-      <workItem from="1675454568718" duration="2100000" />
+      <workItem from="1675454568718" duration="5564000" />
     </task>
     <servers />
   </component>
