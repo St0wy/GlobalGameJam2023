@@ -15,6 +15,7 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _timeToShotAgainInSeconds = 0.3f;
 
+		private Rigidbody2D _rb;
 		private Vector2 _moveDirection;
 		private Vector2 _shootDirection;
 		private Camera _mainCam;
@@ -37,6 +38,7 @@ namespace GlobalGameJam
 		private void Awake()
 		{
 			_mainCam = Camera.main;
+			_rb = GetComponent<Rigidbody2D>();
 		}
 
 		private void Update()
@@ -95,6 +97,7 @@ namespace GlobalGameJam
 		private void ApplyMovements()
 		{
 			// TODO : Move the player
+			_rb.velocity = new Vector2(_moveDirection.x * (_moveSpeed * Time.fixedDeltaTime), 0);
 		}
 
 		private Vector2 GetPlayerToMouseVec()
