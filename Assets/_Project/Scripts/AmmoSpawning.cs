@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class SeedSpawning : MonoBehaviour
+public class AmmoSpawning : MonoBehaviour
 {
     [SerializeField] private float _spawnRate = 3.0f;
-    [SerializeField] private GameObject _seed;
+    [SerializeField] private GameObject _ammo;
     [SerializeField] private float _maxLength = 11.0f;
     [SerializeField] private float _minLength = -11.0f;
     private Vector2 _spawnPos;
@@ -19,7 +19,7 @@ public class SeedSpawning : MonoBehaviour
         _timer += Time.deltaTime;
         if (_timer >= _spawnRate)
         {
-            Instantiate(_seed, _spawnPos, rot);
+            Instantiate(_ammo, _spawnPos, rot);
             _timer = 0;
         }
     }
