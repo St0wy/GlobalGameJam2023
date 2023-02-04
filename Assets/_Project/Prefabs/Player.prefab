@@ -178,6 +178,8 @@ MonoBehaviour:
   _knockbackDrag: 0.5
   _maxLeft: {fileID: 0}
   _maxRight: {fileID: 0}
+  _maxAmmo: 11
+  _ammo: 0
   <KnockbackVelocityX>k__BackingField: 0
 --- !u!114 &6865736318571668908
 MonoBehaviour:

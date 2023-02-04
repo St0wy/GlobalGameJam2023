@@ -54,15 +54,15 @@ namespace GlobalGameJam
 		}
 
 		public int Ammo => _ammo;
+
+		public float SpeedModifier { get; set; } = 1f;
+
 		private bool CanShoot => _shootTimer <= 0f;
 
 		private void Awake()
 		{
 			_mainCam = Camera.main;
 			_rb = GetComponent<Rigidbody2D>();
-
-			// TODO : Remove
-			_ammo = _maxAmmo;
 		}
 
 		private void Update()
@@ -92,6 +92,20 @@ namespace GlobalGameJam
 		private void OnLook(InputValue value)
 		{
 			_shootDirection = value.Get<Vector2>();
+		}
+
+		private void OnDig(InputValue value)
+		{
+			bool pressed = value.Get<float>() > 0f;
+			if (pressed)
+			{
+				SpeedModifier = 0f;
+				
+			}
+			else
+			{
+				SpeedModifier = 1f;
+			}
 		}
 
 		private void FixedUpdate()
@@ -124,7 +138,7 @@ namespace GlobalGameJam
 		private void ApplyMovements()
 		{
 			var movement = new Vector2(_moveDirection.x, 0);
-			movement *= _moveSpeed;
+			movement *= _moveSpeed * SpeedModifier;
 			movement.x += KnockbackVelocityX;
 
 			if (_maxLeft && _maxRight)
@@ -151,6 +165,11 @@ namespace GlobalGameJam
 		{
 			Vector2 pos = _mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 			return pos - (Vector2) transform.position;
+		}
+
+		public void AddAmmo(int amount)
+		{
+			_ammo += amount;
 		}
 	}
 }
