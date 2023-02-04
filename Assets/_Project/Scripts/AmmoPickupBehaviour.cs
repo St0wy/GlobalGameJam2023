@@ -14,8 +14,8 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _pickupTimer;
 
-		[SerializeField]
-		private AudioPlayer _audioPlayer;
+		[SerializeField] private AudioPlayer _audioPlayer;
+		[SerializeField] private AudioPlayer _audioPlayerRoots;
 
 		[SerializeField]
 		private Slider _slider;
@@ -54,7 +54,7 @@ namespace GlobalGameJam
 		{
 			if (!col.CompareTag("Ammo")) return;
 			if (!_playerControls.IsDigging) return;
-
+			_audioPlayerRoots.Play();
 			_pickupItem = col.gameObject;
 			_isPickuping = true;
 			_pickupTimer = _pickupDuration;
