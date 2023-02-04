@@ -167,6 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb4a1035d9e37a45be3b1ffcb7255d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
-  _projectilePrefab: {fileID: 0}
+  _moveSpeed: 6
+  _projectilePrefab: {fileID: 7854990657511900991, guid: 6980828e10e16734fae8611f6be4782a, type: 3}
   _timeToShotAgainInSeconds: 0.3

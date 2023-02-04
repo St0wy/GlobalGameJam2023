@@ -1,4 +1,3 @@
-
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -97,8 +96,9 @@ namespace GlobalGameJam
 
 		private void ApplyMovements()
 		{
-			// TODO : Move the player
-			_rb.velocity = new Vector2(_moveDirection.x * (_moveSpeed * Time.fixedDeltaTime), 0);
+			var movement = new Vector2(_moveDirection.x, 0);
+			movement *= _moveSpeed;
+			_rb.velocity = movement;
 		}
 
 		private Vector2 GetPlayerToMouseVec()
