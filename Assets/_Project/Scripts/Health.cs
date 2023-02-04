@@ -5,7 +5,7 @@ namespace GlobalGameJam
 {
 	public class Health : MonoBehaviour
 	{
-		public delegate void HurtEvent();
+		public delegate void HurtEvent(Transform attackerTransform);
 
 		public delegate void DeathEvent();
 
@@ -26,12 +26,12 @@ namespace GlobalGameJam
 			_healthPoints = _maxHealthPoints;
 		}
 
-		public void Hurt(int hurtAmount)
+		public void Hurt(int hurtAmount, Transform attackerTransform = null)
 		{
 			if (!CanReceiveDamage) return;
 
 			_healthPoints -= hurtAmount;
-			OnHurt?.Invoke();
+			OnHurt?.Invoke(attackerTransform);
 
 			if (IsDead) OnDeath?.Invoke();
 		}
