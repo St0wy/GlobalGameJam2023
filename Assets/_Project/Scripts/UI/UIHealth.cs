@@ -20,11 +20,18 @@ namespace GlobalGameJam.UI
 		private void OnEnable()
 		{
 			_healthToShow.OnHurt += OnHurt;
+			_healthToShow.OnHeal += OnHeal;
 		}
 
 		private void OnDisable()
 		{
 			_healthToShow.OnHurt -= OnHurt;
+			_healthToShow.OnHeal -= OnHeal;
+		}
+
+		private void OnHeal()
+		{
+			UpdateText();
 		}
 
 		private void OnHurt(Transform _)

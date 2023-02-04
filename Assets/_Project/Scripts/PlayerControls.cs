@@ -28,7 +28,6 @@ namespace GlobalGameJam
 		[SerializeField]
 		private int _maxAmmo;
 
-		[ReadOnly]
 		[SerializeField]
 		private int _ammo;
 
@@ -100,7 +99,6 @@ namespace GlobalGameJam
 			if (pressed)
 			{
 				SpeedModifier = 0f;
-				
 			}
 			else
 			{

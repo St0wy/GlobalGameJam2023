@@ -8,6 +8,8 @@ namespace GlobalGameJam
 	{
 		public delegate void HurtEvent(Transform attackerTransform);
 
+		public delegate void HealEvent();
+
 		public delegate void DeathEvent();
 
 		[SerializeField]
@@ -19,6 +21,7 @@ namespace GlobalGameJam
 		[SerializeField] private bool _destroyWhenKilled = true;
 
 		public HurtEvent OnHurt { get; set; }
+		public HealEvent OnHeal { get; set; }
 		public DeathEvent OnDeath { get; set; }
 		public bool CanReceiveDamage { get; set; } = true;
 		public bool IsDead => _healthPoints <= 0;
@@ -28,12 +31,18 @@ namespace GlobalGameJam
 		{
 			_healthPoints = _maxHealthPoints;
 		}
-		
+
 		public void HealPlayer(int heal)
 		{
 			_healthPoints += heal;
-			_healthPoints = Mathf.Min(_maxHealthPoints, _healthPoints);
+			if (_healthPoints > _maxHealthPoints)
+			{
+				_healthPoints = _maxHealthPoints;
+			}
+
+			OnHeal?.Invoke();
 		}
+
 		public void Hurt(int hurtAmount, Transform attackerTransform = null)
 		{
 			if (!CanReceiveDamage) return;
