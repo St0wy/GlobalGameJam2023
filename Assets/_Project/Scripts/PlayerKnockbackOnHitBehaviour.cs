@@ -1,14 +1,13 @@
 ﻿using System;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
 
 namespace GlobalGameJam
 {
 	[RequireComponent(typeof(Rigidbody2D), typeof(Health))]
-	public class KnockbackOnHitBehaviour : MonoBehaviour
+	public class PlayerKnockbackOnHitBehaviour : MonoBehaviour
 	{
 		[SerializeField]
-		private float _knockbackForce = 1f;
+		private float _knockbackForce = 10f;
 
 		private Rigidbody2D _rigidbody;
 		private Health _health;
@@ -23,6 +22,7 @@ namespace GlobalGameJam
 		{
 			_health.OnHurt += attackerTransform =>
 			{
+				if (!attackerTransform) return;
 				float direction = transform.position.x - attackerTransform.position.x;
 				direction = direction <= 0f ? -1f : 1f;
 
@@ -32,7 +32,7 @@ namespace GlobalGameJam
 
 		public void TriggerKnockback(float direction)
 		{
-			
+			_rigidbody.AddForce(new Vector2(direction * _knockbackForce, 0), ForceMode2D.Impulse);
 		}
 	}
 }
