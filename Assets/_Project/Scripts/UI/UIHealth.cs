@@ -1,4 +1,4 @@
-﻿using System;
+﻿using MyBox;
 using TMPro;
 using UnityEngine;
 
@@ -7,6 +7,7 @@ namespace GlobalGameJam.UI
 	[RequireComponent(typeof(TextMeshProUGUI))]
 	public class UIHealth : MonoBehaviour
 	{
+		[MustBeAssigned]
 		[SerializeField]
 		private Health _healthToShow;
 
