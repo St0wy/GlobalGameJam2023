@@ -330,6 +330,7 @@ MonoBehaviour:
   _audioPlayer: {fileID: 1160049606315603020}
   _audioPlayerRoots: {fileID: 1160049606315603020}
   _slider: {fileID: 1882983544}
+  _playerScore: {fileID: 9060297854393986142}
 --- !u!82 &463646142586478162
 AudioSource:
   m_ObjectHideFlags: 0
