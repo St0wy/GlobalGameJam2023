@@ -123,43 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &103384489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4431910613377712639, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-  m_PrefabInstance: {fileID: 824775835}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &103384495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4431910613377712513, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
   m_PrefabInstance: {fileID: 824775835}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &103384497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103384489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2feee73234c49a584469fd0e84be24b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _knockbackForce: 10
---- !u!114 &103384498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103384489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a7f0b6575334b1b8c9b807e9edd81ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _invulnerabilityTimeInSeconds: 1
-  _blinkSpeed: 0.1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,26 +364,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3898476352545654529, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -3898476352545654529, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -3898476352545654529, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -3898476352545654529, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2447439434396594742, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: _knockbackDrag
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4431910613377712513, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -459,18 +407,6 @@ PrefabInstance:
     - target: {fileID: 4431910613377712513, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431910613377712638, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431910613377712638, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431910613377712638, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4431910613377712639, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
       propertyPath: m_Name
