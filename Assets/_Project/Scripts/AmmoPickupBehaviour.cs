@@ -42,7 +42,7 @@ namespace GlobalGameJam
 		{
 			if (!col.CompareTag("Ammo")) return;
 			if (!_playerControls.IsDigging) return;
-			print("Prout");
+
 			_pickupItem = col.gameObject;
 			_isPickuping = true;
 			_pickupTimer = _pickupDuration;
@@ -51,7 +51,7 @@ namespace GlobalGameJam
 		private void OnTriggerExit2D(Collider2D col)
 		{
 			if (!col.CompareTag("Ammo")) return;
-			print("Anti-prout");
+
 			_pickupItem = null;
 			_isPickuping = false;
 			_pickupTimer = _pickupDuration;
