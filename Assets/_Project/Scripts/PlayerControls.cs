@@ -1,5 +1,3 @@
-using System;
-using MyBox;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -29,8 +27,8 @@ namespace GlobalGameJam
 		[SerializeField]
 		private Slider _slider;
 
-		[SerializeField]
-		private int _maxAmmo;
+		// [SerializeField]
+		// private int _maxAmmo;
 
 		[SerializeField]
 		private int _ammo;
@@ -38,16 +36,18 @@ namespace GlobalGameJam
 		[SerializeField]
 		private GameObject _pickupAmmoObject;
 
-		private Rigidbody2D _rb;
+		private Rigidbody2D _rigidbody;
 		private Vector2 _moveDirection;
 		private Vector2 _shootDirection;
 		private Camera _mainCam;
 		private float _shootTimer;
-		private bool _mousePressed = false;
+		private bool _mousePressed;
 		private bool _isDigging;
 
 		[field: SerializeField]
 		public float KnockbackVelocityX { get; set; }
+
+		public Vector2 Movement { get; private set; }
 
 		[SerializeField]
 		private AudioPlayer _audioPlayer;
@@ -74,7 +74,7 @@ namespace GlobalGameJam
 		private void Awake()
 		{
 			_mainCam = Camera.main;
-			_rb = GetComponent<Rigidbody2D>();
+			_rigidbody = GetComponent<Rigidbody2D>();
 		}
 
 		private void Update()
@@ -158,20 +158,21 @@ namespace GlobalGameJam
 			var movement = new Vector2(_moveDirection.x, 0);
 			movement *= _moveSpeed * SpeedModifier;
 			movement.x += KnockbackVelocityX;
+			Movement = movement;
 
 			if (_maxLeft && _maxRight)
 			{
 				float posX = transform.position.x;
 				bool isOutOfBound = posX < _maxLeft.position.x || posX > _maxRight.position.x;
-				bool isGoingOutwards = Mathf.Sign(posX) * Mathf.Sign(movement.x) > 0f;
+				bool isGoingOutwards = Mathf.Sign(posX) * Mathf.Sign(Movement.x) > 0f;
 
 				if (isOutOfBound && isGoingOutwards)
 				{
-					movement = Vector2.zero;
+					Movement = Vector2.zero;
 				}
 			}
 
-			_rb.velocity = movement;
+			_rigidbody.velocity = Movement;
 
 			if (!Mathf.Approximately(KnockbackVelocityX, 0f))
 			{
