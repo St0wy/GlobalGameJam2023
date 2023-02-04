@@ -20,6 +20,7 @@ namespace GlobalGameJam
         void Update()
         {
             _text.text = $"Score: {_playerScore.PlayerScore}";
+            print("caca");
         }
     }
 }
