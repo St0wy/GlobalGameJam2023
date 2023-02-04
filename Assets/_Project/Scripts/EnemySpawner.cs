@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MyBox;
 using UnityEngine;
 
 namespace GlobalGameJam
@@ -13,6 +14,8 @@ namespace GlobalGameJam
 
 		[SerializeField] private float _minSpawnRate = 0.2f;
 		[SerializeField] private float _maxSpawnRate = 2f;
+
+		[MustBeAssigned] [SerializeField] private Transform _downLimit;
 
 		private float _spawnRate;
 		private float _minSpawnPos;
@@ -32,6 +35,7 @@ namespace GlobalGameJam
 			_spawnRate = Random.Range(_minSpawnRate, _maxSpawnRate);
 			GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
 			enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
+			enemy.GetComponent<CorbaxDrop>().DownLimit = _downLimit;
 			yield return new WaitForSeconds(_spawnRate);
 			StartCoroutine(SpawnEnemy());
 		}

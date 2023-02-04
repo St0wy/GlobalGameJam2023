@@ -10,7 +10,7 @@ namespace GlobalGameJam
 	{
 		[SerializeField]
 		private float _ammoSpeed = 5.0f;
-		
+
 		[SerializeField]
 		private float _destroyTime = 3f;
 
@@ -19,7 +19,7 @@ namespace GlobalGameJam
 
 		public Transform UpperLimit { get; set; }
 
-		public bool ShouldDestroy { get; set; }
+		public bool ShouldDestroy { get; set; } = true;
 
 		private void Awake()
 		{

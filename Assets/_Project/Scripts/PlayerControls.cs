@@ -2,6 +2,7 @@ using System;
 using MyBox;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace GlobalGameJam
 {
@@ -26,6 +27,9 @@ namespace GlobalGameJam
 		private Transform _maxRight;
 
 		[SerializeField]
+		private Slider _slider;
+
+		[SerializeField]
 		private int _maxAmmo;
 
 		[SerializeField]
@@ -44,6 +48,7 @@ namespace GlobalGameJam
 
 		[field: SerializeField]
 		public float KnockbackVelocityX { get; set; }
+
 		[SerializeField]
 		private AudioPlayer _audioPlayer;
 
@@ -108,12 +113,14 @@ namespace GlobalGameJam
 			{
 				SpeedModifier = 0f;
 				_isDigging = true;
+				_slider.gameObject.SetActive(true);
 				_pickupAmmoObject.SetActive(true);
 			}
 			else
 			{
 				SpeedModifier = 1f;
 				_isDigging = false;
+				_slider.gameObject.SetActive(false);
 				_pickupAmmoObject.SetActive(false);
 			}
 		}

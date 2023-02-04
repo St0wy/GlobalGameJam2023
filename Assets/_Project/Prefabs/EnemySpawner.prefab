@@ -103,3 +103,4 @@ MonoBehaviour:
   _target: {fileID: 0}
   _minSpawnRate: 1
   _maxSpawnRate: 3
+  _downLimit: {fileID: 0}

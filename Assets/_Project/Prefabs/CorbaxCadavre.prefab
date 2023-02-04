@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4769371301397406136}
   - component: {fileID: 5567720618401543888}
-  - component: {fileID: 553376428554497090}
   - component: {fileID: -8071173135103621386}
   - component: {fileID: -3812263692316542117}
+  - component: {fileID: -8294753066471311956}
   m_Layer: 8
   m_Name: CorbaxCadavre
   m_TagString: Cadavre
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &553376428554497090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4998046192634972056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a446799fb1d394345a38b41995c3da62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 1
 --- !u!61 &-8071173135103621386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -134,7 +121,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4998046192634972056}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -147,3 +134,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-8294753066471311956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4998046192634972056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8647ef992a47c1bf522d8eb91ac890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fallSpeed: 5
+  _destroyTime: 3
