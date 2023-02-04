@@ -11,7 +11,8 @@ namespace GlobalGameJam
 		[ReadOnly]
 		[SerializeField]
 		private float _pickupTimer;
-
+		[SerializeField]
+		private AudioPlayer _audioPlayer;
 		private PlayerControls _playerControls;
 		private bool _isPickuping;
 		private GameObject _pickupItem;
@@ -35,6 +36,7 @@ namespace GlobalGameJam
 			if (!(_pickupTimer <= 0f)) return;
 			Destroy(_pickupItem);
 			_playerControls.AddAmmo(1);
+			_audioPlayer.Play();
 			_isPickuping = false;
 		}
 
