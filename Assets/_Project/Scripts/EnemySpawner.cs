@@ -10,7 +10,7 @@ namespace GlobalGameJam
 		[SerializeField] private List<GameObject> _enemies;
 		[SerializeField] private Vector2 _spawnPos;
 		[SerializeField] private Transform _target;
-
+		[SerializeField] private Score _score;
 		[SerializeField] private float _minSpawnRate = 0.2f;
 		[SerializeField] private float _maxSpawnRate = 2f;
 
@@ -32,6 +32,7 @@ namespace GlobalGameJam
 			_spawnRate = Random.Range(_minSpawnRate, _maxSpawnRate);
 			GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
 			enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
+			enemy.GetComponent<ScoreOnDeathBehaviour>().Score = _score;
 			yield return new WaitForSeconds(_spawnRate);
 			StartCoroutine(SpawnEnemy());
 		}

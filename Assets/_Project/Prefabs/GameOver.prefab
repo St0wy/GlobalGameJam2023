@@ -460,7 +460,7 @@ MonoBehaviour:
   _mainMenuScene:
     Scene: {fileID: 102900000, guid: cdb8dc33dd3d67f488275ef6d014fed6, type: 3}
     SceneName: MainMenuScene
-    sceneIndex: 1
+    sceneIndex: 0
     sceneEnabled: 1
 --- !u!1 &2263258000294813794
 GameObject:
