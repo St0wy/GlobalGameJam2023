@@ -89,7 +89,6 @@ namespace GlobalGameJam
 			{
 				Vector2 playerToMouse = GetPlayerToMouseVec();
 				_shootDirection = playerToMouse.normalized;
-				_audioPlayer.Play();
 			}
 			else
 			{
@@ -144,6 +143,7 @@ namespace GlobalGameJam
 			var behaviour = projectile.GetComponent<ProjectileBehaviour>();
 			behaviour.Shoot(direction);
 			_ammo -= 1;
+			_audioPlayer.Play();
 		}
 
 		private void ApplyMovements()
