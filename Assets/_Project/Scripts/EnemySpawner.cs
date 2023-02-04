@@ -36,7 +36,7 @@ namespace GlobalGameJam
 			GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
 			enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
 			enemy.GetComponent<CorbaxDrop>().DownLimit = _downLimit;
-			//enemy.GetComponent<ScoreOnDeathBehaviour>().Score = _score;
+			enemy.GetComponent<ScoreOnDeathBehaviour>().Score = _score;
 
 			yield return new WaitForSeconds(_spawnRate);
 			StartCoroutine(SpawnEnemy());

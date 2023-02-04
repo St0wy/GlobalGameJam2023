@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 3975877392055190192}
   - component: {fileID: 6647676593003634968}
   - component: {fileID: 5408994875822163048}
+  - component: {fileID: 8393937024080724634}
   m_Layer: 7
   m_Name: Corbax
   m_TagString: Enemy
@@ -324,7 +325,7 @@ Animator:
   m_GameObject: {fileID: 8641569713992341583}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c97c40eb5e8b1d40bd23fd5e18f0368, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -347,3 +348,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreAmount: 100
+--- !u!114 &8393937024080724634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641569713992341583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d527c5c64034924bc8a6cac6825bccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
