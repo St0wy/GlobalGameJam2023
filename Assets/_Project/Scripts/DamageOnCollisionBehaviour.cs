@@ -14,6 +14,11 @@ namespace GlobalGameJam
 
 		private void OnCollisionEnter2D(Collision2D col)
 		{
+			OnCollisionStay2D(col);
+		}
+
+		private void OnCollisionStay2D(Collision2D col)
+		{
 			if (!col.collider.TryGetComponent(out Health health)) return;
 
 			// ReSharper disable once LoopCanBeConvertedToQuery

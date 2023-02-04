@@ -19,8 +19,8 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _pickupTimer;
 
-		[SerializeField]
-		private AudioPlayer _audioPlayer;
+		[SerializeField] private AudioPlayer _audioPlayer;
+		[SerializeField] private AudioPlayer _audioPlayerRoots;
 
 		[SerializeField]
 		private Slider _slider;
@@ -72,6 +72,7 @@ namespace GlobalGameJam
 		private void OnTriggerEnter2D(Collider2D col)
 		{
 			if (!_playerControls.IsDigging) return;
+
 			bool isCadavre = col.CompareTag("Cadavre");
 			if (!col.CompareTag("Ammo") && !isCadavre) return;
 
@@ -83,6 +84,8 @@ namespace GlobalGameJam
 			{
 				cadavreBehaviour.ShouldDestroy = false;
 			}
+
+			_audioPlayerRoots.Play();
 
 			_pickupItem = col.gameObject;
 			_isPickuping = true;

@@ -454,13 +454,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ec0e6c01354bf7af44e88d7d4750d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHealth: {fileID: 0}
+  _playerHealth: {fileID: 6865736318571668908, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
   _gameOverUI: {fileID: 2263258000294813794}
   _mainMenuButton: {fileID: 2263257998994351807}
   _mainMenuScene:
     Scene: {fileID: 102900000, guid: cdb8dc33dd3d67f488275ef6d014fed6, type: 3}
     SceneName: MainMenuScene
-    sceneIndex: 1
+    sceneIndex: 0
     sceneEnabled: 1
 --- !u!1 &2263258000294813794
 GameObject:
