@@ -1,3 +1,4 @@
+using System;
 using MyBox;
 using UnityEngine;
 
@@ -27,7 +28,12 @@ namespace GlobalGameJam
 		{
 			_healthPoints = _maxHealthPoints;
 		}
-
+		
+		public void HealPlayer(int heal)
+		{
+			_healthPoints += heal;
+			_healthPoints = Mathf.Min(_maxHealthPoints, _healthPoints);
+		}
 		public void Hurt(int hurtAmount, Transform attackerTransform = null)
 		{
 			if (!CanReceiveDamage) return;

@@ -7,6 +7,7 @@ TagManager:
   - Ammo
   - Enemy
   - Projectile
+  - Cadavre
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
-  - 
-  - 
+  - Corbax
+  - Cadavre
+  - Projectile
   - 
   - 
   - 
@@ -43,10 +44,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 710589795
-    locked: 0
-  - name: Entities
-    uniqueID: 1102358607
     locked: 0
