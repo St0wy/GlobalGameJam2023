@@ -1,25 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace GlobalGameJam
+namespace GlobalGameJam.UI
 {
-    public class UIScore : MonoBehaviour
-    {
-        [SerializeField] private Score _playerScore;
-        private TextMeshProUGUI _text;
-    
-        private void Start()
-        {
-            _text = GetComponent<TextMeshProUGUI>();
-        }
+	public class UIScore : MonoBehaviour
+	{
+		[SerializeField] private Score _playerScore;
+		private TextMeshProUGUI _text;
 
-        void Update()
-        {
-            _text.text = $"Score: {_playerScore.PlayerScore}";
-        }
-    }
+		private void Start()
+		{
+			_text = GetComponent<TextMeshProUGUI>();
+		}
+
+		private void Update()
+		{
+			_text.text = $"Score: {_playerScore.PlayerScore}";
+		}
+	}
 }
