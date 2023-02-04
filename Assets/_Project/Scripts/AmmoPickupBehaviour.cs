@@ -1,8 +1,10 @@
 ﻿using MyBox;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GlobalGameJam
 {
+	[RequireComponent(typeof(AudioPlayer))]
 	public class AmmoPickupBehaviour : MonoBehaviour
 	{
 		[SerializeField]
@@ -11,8 +13,13 @@ namespace GlobalGameJam
 		[ReadOnly]
 		[SerializeField]
 		private float _pickupTimer;
+
 		[SerializeField]
 		private AudioPlayer _audioPlayer;
+
+		[SerializeField]
+		private Slider _slider;
+
 		private PlayerControls _playerControls;
 		private bool _isPickuping;
 		private GameObject _pickupItem;
@@ -25,11 +32,15 @@ namespace GlobalGameJam
 
 		private void Update()
 		{
+			_slider.gameObject.SetActive(_isPickuping);
 			if (!_isPickuping) return;
 			if (!_playerControls.IsDigging)
 			{
 				_isPickuping = false;
+				return;
 			}
+
+			_slider.value = _pickupTimer / _pickupDuration;
 
 			_pickupTimer -= Time.deltaTime;
 
