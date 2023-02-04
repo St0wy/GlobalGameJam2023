@@ -17,17 +17,15 @@ namespace GlobalGameJam
 		private int _healthPoints;
 		[SerializeField] private bool _destroyWhenKilled = true;
 
-
-		private bool IsAlive;
 		public HurtEvent OnHurt { get; set; }
 		public DeathEvent OnDeath { get; set; }
 		public bool CanReceiveDamage { get; set; } = true;
-		//public bool IsDead => _healthPoints <= 0;
+		public bool IsDead => _healthPoints <= 0;
+		public int HealthPoints => _healthPoints;
 
 		private void Awake()
 		{
 			_healthPoints = _maxHealthPoints;
-			IsAlive = true;
 		}
 
 		public void Hurt(int hurtAmount, Transform attackerTransform = null)
@@ -36,19 +34,15 @@ namespace GlobalGameJam
 
 			_healthPoints -= hurtAmount;
 			OnHurt?.Invoke(attackerTransform);
-			
-			if (_healthPoints <= 0)
+
+			if (IsDead)
 			{
-				IsAlive = false;
 				OnDeath?.Invoke();
+				if (_destroyWhenKilled)
+				{
+					Destroy(gameObject);
+				}
 			}
-
-			if (!IsAlive && _destroyWhenKilled)
-			{
-				Destroy(gameObject);
-			}
-
-			//if (IsDead) OnDeath?.Invoke();
 		}
 	}
 }
