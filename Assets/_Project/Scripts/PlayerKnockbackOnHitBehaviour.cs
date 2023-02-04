@@ -22,14 +22,21 @@ namespace GlobalGameJam
 
 		private void OnEnable()
 		{
-			_health.OnHurt += attackerTransform =>
-			{
-				if (!attackerTransform) return;
-				float direction = transform.position.x - attackerTransform.position.x;
-				direction = direction <= 0f ? -1f : 1f;
+			_health.OnHurt += OnHurt;
+		}
 
-				TriggerKnockback(direction);
-			};
+		private void OnDisable()
+		{
+			_health.OnHurt -= OnHurt;
+		}
+
+		private void OnHurt(Transform attackerTransform)
+		{
+			if (!attackerTransform) return;
+			float direction = transform.position.x - attackerTransform.position.x;
+			direction = direction <= 0f ? -1f : 1f;
+
+			TriggerKnockback(direction);
 		}
 
 		public void TriggerKnockback(float direction)
