@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b1135ae6f1c48429568c6c3cdc15d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerScore: {fileID: 1106565149}
+  _playerScore: {fileID: 1694976420}
 --- !u!114 &1012286657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,17 +1145,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
---- !u!114 &1106565149 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -1808726148041320480, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
-  m_PrefabInstance: {fileID: 1106565148}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8c0b3104426164789baddec634a610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1106565150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4431910613377712513, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
@@ -1376,6 +1365,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1694976420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9060297854393986142, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
+  m_PrefabInstance: {fileID: 1106565148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8c0b3104426164789baddec634a610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1807682889 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2263258000233417146, guid: a4414e169c7b9f64b838f7cb8d87d90a, type: 3}
@@ -1399,7 +1399,7 @@ PrefabInstance:
     - target: {fileID: 2467433431277126817, guid: 4412266793f82f742876db78c7262fea, type: 3}
       propertyPath: _score
       value: 
-      objectReference: {fileID: 1106565149}
+      objectReference: {fileID: 1694976420}
     - target: {fileID: 2467433431277126817, guid: 4412266793f82f742876db78c7262fea, type: 3}
       propertyPath: _target
       value: 
