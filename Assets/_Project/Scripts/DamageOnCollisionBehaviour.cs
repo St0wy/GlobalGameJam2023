@@ -21,7 +21,7 @@ namespace GlobalGameJam
 			{
 				if (!col.collider.CompareTag(collisionTag)) continue;
 
-				health.Hurt(_damageAmount);
+				health.Hurt(_damageAmount, transform);
 				return;
 			}
 		}

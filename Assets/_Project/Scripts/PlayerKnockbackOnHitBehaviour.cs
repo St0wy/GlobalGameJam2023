@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GlobalGameJam
 {
-	[RequireComponent(typeof(Rigidbody2D), typeof(Health))]
+	[RequireComponent(typeof(Rigidbody2D), typeof(Health), typeof(PlayerControls))]
 	public class PlayerKnockbackOnHitBehaviour : MonoBehaviour
 	{
 		[SerializeField]
@@ -11,11 +11,13 @@ namespace GlobalGameJam
 
 		private Rigidbody2D _rigidbody;
 		private Health _health;
+		private PlayerControls _playerControls;
 
 		private void Awake()
 		{
 			_rigidbody = GetComponent<Rigidbody2D>();
 			_health = GetComponent<Health>();
+			_playerControls = GetComponent<PlayerControls>();
 		}
 
 		private void OnEnable()
@@ -32,7 +34,7 @@ namespace GlobalGameJam
 
 		public void TriggerKnockback(float direction)
 		{
-			_rigidbody.AddForce(new Vector2(direction * _knockbackForce, 0), ForceMode2D.Impulse);
+			_playerControls.KnockbackVelocityX = direction * _knockbackForce;
 		}
 	}
 }
