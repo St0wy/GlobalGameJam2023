@@ -8,7 +8,6 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _movementSpeed = 1.0f;
 		// private Vector2 _movementDirection;
-		[SerializeField] private int damage = 2;
 		private float _destroyTime = 3f;
 		private Rigidbody2D _rigidbody;
 
@@ -27,7 +26,6 @@ namespace GlobalGameJam
 		private void OnCollisionEnter2D(Collision2D collision)
 		{
 			if (collision.gameObject.CompareTag("Player")) return;
-
 			Destroy(gameObject);
 		}
 	}
