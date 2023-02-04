@@ -51,9 +51,9 @@ namespace GlobalGameJam
 
 		private void OnTriggerExit2D(Collider2D col)
 		{
-			_audioPlayer.Play();
+			
 			if (!col.CompareTag("Ammo")) return;
-
+			_audioPlayer.Play();
 			_pickupItem = null;
 			_isPickuping = false;
 			_pickupTimer = _pickupDuration;
