@@ -328,6 +328,7 @@ MonoBehaviour:
   _healAmount: 1
   _pickupTimer: 0
   _audioPlayer: {fileID: 1160049606315603020}
+  _audioPlayerRoots: {fileID: 1160049606315603020}
   _slider: {fileID: 1882983544}
 --- !u!82 &463646142586478162
 AudioSource:
