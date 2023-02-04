@@ -29,7 +29,6 @@ namespace GlobalGameJam
 
 		private void OnDeath()
 		{
-			print("Prout");
 			Score.IncrementScore(_scoreAmount);
 		}
 	}

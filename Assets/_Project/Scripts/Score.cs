@@ -15,7 +15,6 @@ namespace GlobalGameJam
 		public void IncrementScore(int value)
 		{
 			_playerScore += value;
-			print(_playerScore);
 		}
 	}
 }
