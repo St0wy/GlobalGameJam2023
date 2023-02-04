@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ammoSpeed: 5
-  _destroyTime: 4
+  _destroyTime: 6
 --- !u!70 &3501925023328533798
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
