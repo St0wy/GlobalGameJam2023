@@ -14,10 +14,15 @@ namespace GlobalGameJam
 
 		private void OnCollisionEnter2D(Collision2D col)
 		{
-			OnCollisionStay2D(col);
+			ManageCollisions(col);
 		}
 
 		private void OnCollisionStay2D(Collision2D col)
+		{
+			ManageCollisions(col);
+		}
+
+		private void ManageCollisions(Collision2D col)
 		{
 			if (!col.collider.TryGetComponent(out Health health)) return;
 
