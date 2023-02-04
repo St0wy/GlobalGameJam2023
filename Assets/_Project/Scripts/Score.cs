@@ -1,16 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace GlobalGameJam
 {
-    public class Score : MonoBehaviour
-    {
-        public int PlayerScore { get; private set; }
+	public class Score : MonoBehaviour
+	{
+		private int _playerScore;
+		public int PlayerScore => _playerScore;
 
-        public void IncrementScore(int value)
-        {
-            PlayerScore += value;
-        }
-    }
+		private void Start()
+		{
+			_playerScore = 0;
+		}
+
+		public void IncrementScore(int value)
+		{
+			_playerScore += value;
+			print(_playerScore);
+		}
+	}
 }

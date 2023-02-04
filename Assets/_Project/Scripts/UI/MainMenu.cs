@@ -1,40 +1,39 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using MyBox;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace GlobalGameJam
+namespace GlobalGameJam.UI
 {
-    public class MainMenu : MonoBehaviour
-    {
-        [SerializeField] private GameObject _optionsMenu;
+	public class MainMenu : MonoBehaviour
+	{
+		[SerializeField] private GameObject _optionsMenu;
+		[SerializeField] private SceneReference _gameScene;
 
-        private void Start()
-        {
-            _optionsMenu.SetActive(false);
-        }
+		private void Start()
+		{
+			_optionsMenu.SetActive(false);
+		}
 
-        public void PlayGame()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+		public void PlayGame()
+		{
+			_gameScene.LoadScene();
+		}
 
-        public void QuitGame()
-        {
-            Application.Quit();
-        }
+		public void QuitGame()
+		{
+			Application.Quit();
+		}
 
-        public void ToggleOptions()
-        {
-            gameObject.SetActive(false);
-            _optionsMenu.SetActive(true);
-        }
+		public void ToggleOptions()
+		{
+			gameObject.SetActive(false);
+			_optionsMenu.SetActive(true);
+		}
 
-        public void ToggleMainMenu()
-        {
-            _optionsMenu.SetActive(false);
-            gameObject.SetActive(true);
-        }
-    }
+		public void ToggleMainMenu()
+		{
+			_optionsMenu.SetActive(false);
+			gameObject.SetActive(true);
+		}
+	}
 }
