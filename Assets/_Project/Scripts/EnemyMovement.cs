@@ -19,7 +19,6 @@ namespace GlobalGameJam
             _rb = GetComponent<Rigidbody2D>();
         }
 
-        // Update is called once per frame
         void Update()
         {
             Vector2 corbaxToTarget = PlayerTransform.position - transform.position;

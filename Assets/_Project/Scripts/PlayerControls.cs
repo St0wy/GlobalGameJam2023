@@ -15,12 +15,18 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _timeToShotAgainInSeconds = 0.3f;
 
+		[SerializeField]
+		private float _knockbackDrag = 0.05f;
+
 		private Rigidbody2D _rb;
 		private Vector2 _moveDirection;
 		private Vector2 _shootDirection;
 		private Camera _mainCam;
 		private float _shootTimer;
 		private bool _mousePressed = false;
+
+		[field: SerializeField]
+		public float KnockbackVelocityX { get; set; }
 
 		public Vector2 Input
 		{
@@ -98,7 +104,13 @@ namespace GlobalGameJam
 		{
 			var movement = new Vector2(_moveDirection.x, 0);
 			movement *= _moveSpeed;
+			movement.x += KnockbackVelocityX;
 			_rb.velocity = movement;
+
+			if (!Mathf.Approximately(KnockbackVelocityX, 0f))
+			{
+				KnockbackVelocityX -= _knockbackDrag * Mathf.Sign(KnockbackVelocityX);
+			}
 		}
 
 		private Vector2 GetPlayerToMouseVec()
