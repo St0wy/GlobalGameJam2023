@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 103384498}
   - component: {fileID: 103384499}
   - component: {fileID: 103384500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ MonoBehaviour:
   _maxLeft: {fileID: 0}
   _maxRight: {fileID: 0}
   _maxAmmo: 11
-  _ammo: 0
+  _ammo: 100
   <KnockbackVelocityX>k__BackingField: 0
 --- !u!114 &6865736318571668908
 MonoBehaviour:

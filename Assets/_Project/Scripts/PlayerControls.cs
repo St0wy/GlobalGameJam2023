@@ -31,12 +31,16 @@ namespace GlobalGameJam
 		[SerializeField]
 		private int _ammo;
 
+		[SerializeField]
+		private GameObject _pickupAmmoObject;
+
 		private Rigidbody2D _rb;
 		private Vector2 _moveDirection;
 		private Vector2 _shootDirection;
 		private Camera _mainCam;
 		private float _shootTimer;
 		private bool _mousePressed = false;
+		private bool _isDigging;
 
 		[field: SerializeField]
 		public float KnockbackVelocityX { get; set; }
@@ -53,6 +57,8 @@ namespace GlobalGameJam
 		}
 
 		public int Ammo => _ammo;
+
+		public bool IsDigging => _isDigging;
 
 		public float SpeedModifier { get; set; } = 1f;
 
@@ -90,7 +96,7 @@ namespace GlobalGameJam
 
 		private void OnLook(InputValue value)
 		{
-			_shootDirection = value.Get<Vector2>();
+			_shootDirection = value.Get<Vector2>().normalized;
 		}
 
 		private void OnDig(InputValue value)
@@ -99,10 +105,14 @@ namespace GlobalGameJam
 			if (pressed)
 			{
 				SpeedModifier = 0f;
+				_isDigging = true;
+				_pickupAmmoObject.SetActive(true);
 			}
 			else
 			{
 				SpeedModifier = 1f;
+				_isDigging = false;
+				_pickupAmmoObject.SetActive(false);
 			}
 		}
 
@@ -164,6 +174,7 @@ namespace GlobalGameJam
 			Vector2 pos = _mainCam.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 			return pos - (Vector2) transform.position;
 		}
+
 
 		public void AddAmmo(int amount)
 		{

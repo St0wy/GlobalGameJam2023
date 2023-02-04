@@ -1,34 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
-using GlobalGameJam;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+namespace GlobalGameJam
 {
-    // Start is called before the first frame update
-    [SerializeField] List<GameObject> _enemies = new List<GameObject>();
-    [SerializeField] Vector2 _spawnPos;
-    [SerializeField] private Transform _target;
+	public class EnemySpawner : MonoBehaviour
+	{
+		// Start is called before the first frame update
+		[SerializeField] private List<GameObject> _enemies;
+		[SerializeField] private Vector2 _spawnPos;
+		[SerializeField] private Transform _target;
 
-    private float _spawnRate;
-    private float _minspawnPos;
-    private float _maxspawnPos;
+		[SerializeField] private float _minSpawnRate = 0.2f;
+		[SerializeField] private float _maxSpawnRate = 2f;
 
-    void Start()
-    {
-        StartCoroutine(SpawnEnemy());
-        _minspawnPos = _spawnPos.x - 11;
-        _maxspawnPos = _spawnPos.x + 11;
-    }
+		private float _spawnRate;
+		private float _minSpawnPos;
+		private float _maxSpawnPos;
 
-    IEnumerator SpawnEnemy()
-    {
-        _spawnPos = gameObject.transform.position;
-        _spawnPos.x = Random.Range(_minspawnPos, _maxspawnPos);
-        _spawnRate = Random.Range(0.2f, 2.0f);
-        GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
-        enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
-        yield return new WaitForSeconds(_spawnRate);
-        StartCoroutine(SpawnEnemy());
-    }
+		private void Start()
+		{
+			StartCoroutine(SpawnEnemy());
+			_minSpawnPos = _spawnPos.x - 11;
+			_maxSpawnPos = _spawnPos.x + 11;
+		}
+
+		private IEnumerator SpawnEnemy()
+		{
+			_spawnPos = gameObject.transform.position;
+			_spawnPos.x = Random.Range(_minSpawnPos, _maxSpawnPos);
+			_spawnRate = Random.Range(_minSpawnRate, _maxSpawnRate);
+			GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
+			enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
+			yield return new WaitForSeconds(_spawnRate);
+			StartCoroutine(SpawnEnemy());
+		}
+	}
 }

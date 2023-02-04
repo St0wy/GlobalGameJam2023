@@ -100,4 +100,4 @@ MonoBehaviour:
   _enemies:
   - {fileID: 8641569713992341583, guid: 2e3dfd0113ca55e4c86ab6e23c2f03b8, type: 3}
   _spawnPos: {x: 0, y: 0}
-  _target: {fileID: 4431910613377712513, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
+  _target: {fileID: 0}
