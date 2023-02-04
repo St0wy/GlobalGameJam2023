@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -112178197030487921}
   - component: {fileID: -605994318876905279}
   - component: {fileID: 5158028189252527319}
-  - component: {fileID: -597521597298989532}
   m_Layer: 9
   m_Name: Projectile
   m_TagString: Projectile
@@ -141,7 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 15
-  _audioPlayer: {fileID: 5158028189252527319}
 --- !u!114 &-112178197030487921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,29 +253,6 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!114 &5158028189252527319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7854990657511900991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b86e5df67678e1d4ea31a0314b424acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioClips:
-  - {fileID: 8300000, guid: 76698565548d02b4a8a55b1738c33d15, type: 3}
-  - {fileID: 8300000, guid: 3a26fc462e8de9c4293db021d7748dc1, type: 3}
-  - {fileID: 8300000, guid: 7b5ca316227e69945a09653006198eae, type: 3}
-  - {fileID: 8300000, guid: 4c4a803a8b7dd394d82a82231d9e9bb6, type: 3}
-  - {fileID: 8300000, guid: e8fca21cfcd575746b74c851c7328de3, type: 3}
-  - {fileID: 8300000, guid: 240b7c4e84321e44c82fb86978ed5a76, type: 3}
-  - {fileID: 8300000, guid: 350340ba75dd8fb428286540f0d3f957, type: 3}
-  - {fileID: 8300000, guid: 7db30de8bfa593544b179f85bb3b3f6e, type: 3}
-  - {fileID: 8300000, guid: abedd5ef73486494986cfe946de4a4b9, type: 3}
-  - {fileID: 8300000, guid: 1dc858d625bb1ad49962a39a7df25847, type: 3}
---- !u!114 &-597521597298989532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

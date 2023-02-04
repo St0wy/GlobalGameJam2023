@@ -7,8 +7,7 @@ namespace GlobalGameJam
 	{
 		[SerializeField]
 		private int _damageAmount = 1;
-		[SerializeField]
-		private AudioPlayer _audioPlayer;
+		//[SerializeField] private AudioPlayer _audioPlayer;
 		[SerializeField]
 		[Tag]
 		private string[] _tagsToHit;
@@ -16,7 +15,7 @@ namespace GlobalGameJam
 		private void OnCollisionEnter2D(Collision2D col)
 		{
 			if (!col.collider.TryGetComponent(out Health health)) return;
-			_audioPlayer.Play();
+			//_audioPlayer.Play();
 			// ReSharper disable once LoopCanBeConvertedToQuery
 			foreach (string collisionTag in _tagsToHit)
 			{

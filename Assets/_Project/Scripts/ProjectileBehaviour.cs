@@ -7,8 +7,6 @@ namespace GlobalGameJam
 	{
 		[SerializeField]
 		private float _movementSpeed = 1.0f;
-		[SerializeField]
-		private AudioPlayer _audioPlayer;
 		// private Vector2 _movementDirection;
 		private float _destroyTime = 3f;
 		private Rigidbody2D _rigidbody;
@@ -17,7 +15,6 @@ namespace GlobalGameJam
 		{
 			_rigidbody = GetComponent<Rigidbody2D>();
 			Destroy(gameObject, _destroyTime);
-			_audioPlayer.Play();
 		}
 
 		public void Shoot(Vector2 direction)

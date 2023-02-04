@@ -44,6 +44,8 @@ namespace GlobalGameJam
 
 		[field: SerializeField]
 		public float KnockbackVelocityX { get; set; }
+		[SerializeField]
+		private AudioPlayer _audioPlayer;
 
 		public Vector2 Input
 		{
@@ -87,6 +89,7 @@ namespace GlobalGameJam
 			{
 				Vector2 playerToMouse = GetPlayerToMouseVec();
 				_shootDirection = playerToMouse.normalized;
+				_audioPlayer.Play();
 			}
 			else
 			{
