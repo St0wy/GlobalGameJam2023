@@ -20,7 +20,6 @@ namespace GlobalGameJam
 			foreach (string collisionTag in _tagsToHit)
 			{
 				if (!col.collider.CompareTag(collisionTag)) continue;
-				print("TOuCHé");
 				health.Hurt(_damageAmount, transform);
 				return;
 			}
