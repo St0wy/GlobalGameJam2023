@@ -41,6 +41,7 @@ namespace GlobalGameJam
 
 		public void TriggerKnockback(float direction)
 		{
+			print("prout");
 			_playerControls.KnockbackVelocityX = direction * _knockbackForce;
 		}
 	}
