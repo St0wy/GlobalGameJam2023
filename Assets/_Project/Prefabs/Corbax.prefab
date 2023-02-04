@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8641569713992341680}
   - component: {fileID: 8641569713992341683}
   - component: {fileID: -8779587204603697340}
+  - component: {fileID: 1206720817}
   m_Layer: 0
   m_Name: Corbax
   m_TagString: Untagged
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  playerTransform: {fileID: 7098776656414652705, guid: 9fe466b7cef42cc40ab0c0e1737217c3, type: 3}
+  <PlayerTransform>k__BackingField: {fileID: 0}
   _velocity: {x: 0, y: 0}
 --- !u!50 &8641569713992341683
 Rigidbody2D:
@@ -122,7 +123,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-8779587204603697340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.23542237, y: 0.11771178}
@@ -147,5 +148,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.9013515, y: 5.039657}
+  m_Size: {x: 3.82, y: 2.38}
   m_EdgeRadius: 0
+--- !u!114 &1206720817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641569713992341583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f85db1f6614aaeadedacce48ca0d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 1
+  _tagsToHit:
+  - Player
