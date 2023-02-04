@@ -3,15 +3,16 @@ using UnityEngine;
 
 namespace GlobalGameJam
 {
-	[RequireComponent(typeof(AudioSource), typeof(Health))]
+	[RequireComponent(typeof(AudioPlayer), typeof(Health))]
 	public class PlaySoundOnHurtBehaviour : MonoBehaviour
 	{
-		private AudioSource _audioSource;
+		[SerializeField]
+		private AudioPlayer _audioPlayer;
 		private Health _health;
 
 		private void Awake()
 		{
-			_audioSource = GetComponent<AudioSource>();
+			// _audioPlayer = GetComponent<AudioPlayer>();
 			_health = GetComponent<Health>();
 		}
 
@@ -27,7 +28,7 @@ namespace GlobalGameJam
 
 		private void OnHurt(Transform _)
 		{
-			_audioSource.Play();
+			_audioPlayer.Play();
 		}
 	}
 }
