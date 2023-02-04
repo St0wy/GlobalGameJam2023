@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ammo
   - Enemy
+  - Projectile
+  - Cadavre
   layers:
   - Default
   - TransparentFX
@@ -14,9 +16,9 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
-  - 
-  - 
+  - Corbax
+  - Cadavre
+  - Projectile
   - 
   - 
   - 
