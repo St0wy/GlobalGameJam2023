@@ -36,7 +36,6 @@ namespace GlobalGameJam
 			if (!(_pickupTimer <= 0f)) return;
 			Destroy(_pickupItem);
 			_playerControls.AddAmmo(1);
-			_audioPlayer.Play();
 			_isPickuping = false;
 		}
 
@@ -52,6 +51,7 @@ namespace GlobalGameJam
 
 		private void OnTriggerExit2D(Collider2D col)
 		{
+			_audioPlayer.Play();
 			if (!col.CompareTag("Ammo")) return;
 			print("Anti-prout");
 			_pickupItem = null;
