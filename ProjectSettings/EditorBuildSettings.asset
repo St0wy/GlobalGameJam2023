@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/SceneLudoDeFabian.unity
     guid: 0711134d0423d414dbe71a381ac34958
+  - enabled: 1
+    path: Assets/_Project/Scenes/SceneFabian.unity
+    guid: 48ffdc5dee8008940b337817fe42e98d
   m_configObjects: {}
