@@ -142,10 +142,6 @@ namespace GlobalGameJam
 
             _shootTimer = _timeToShotAgainInSeconds;
             GameObject projectile = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
-
-            var radvalue = Mathf.Atan2(direction.y, direction.x);
-            var angle = radvalue * (180 / Mathf.PI);
-            projectile.transform.rotation = Quaternion.Euler(0, 0, angle + -90);
             var behaviour = projectile.GetComponent<ProjectileBehaviour>();
             behaviour.Shoot(direction);
             _ammo -= 1;
