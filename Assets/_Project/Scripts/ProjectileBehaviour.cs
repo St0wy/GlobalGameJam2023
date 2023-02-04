@@ -16,6 +16,7 @@ namespace GlobalGameJam
 		{
 			_rigidbody = GetComponent<Rigidbody2D>();
 			Destroy(gameObject, _destroyTime);
+
 		}
 
 		public void Shoot(Vector2 direction)
