@@ -48,3 +48,4 @@ MonoBehaviour:
   _ammo: {fileID: 3913925349097697074, guid: 9fe466b7cef42cc40ab0c0e1737217c3, type: 3}
   _maxLength: 11
   _minLength: -11
+  _upperLimit: {fileID: 0}
