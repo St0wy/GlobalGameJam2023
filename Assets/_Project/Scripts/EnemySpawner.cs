@@ -32,7 +32,7 @@ namespace GlobalGameJam
 			_spawnRate = Random.Range(_minSpawnRate, _maxSpawnRate);
 			GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
 			enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
-			enemy.GetComponent<ScoreOnDeathBehaviour>().Score = _score;
+			//enemy.GetComponent<ScoreOnDeathBehaviour>().Score = _score;
 			yield return new WaitForSeconds(_spawnRate);
 			StartCoroutine(SpawnEnemy());
 		}
