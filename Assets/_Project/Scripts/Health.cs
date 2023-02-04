@@ -20,6 +20,8 @@ namespace GlobalGameJam
 		private int _healthPoints;
 		[SerializeField] private bool _destroyWhenKilled = true;
 
+		
+		
 		public HurtEvent OnHurt { get; set; }
 		public HealEvent OnHeal { get; set; }
 		public DeathEvent OnDeath { get; set; }
@@ -46,10 +48,8 @@ namespace GlobalGameJam
 		public void Hurt(int hurtAmount, Transform attackerTransform = null)
 		{
 			if (!CanReceiveDamage) return;
-
 			_healthPoints -= hurtAmount;
 			OnHurt?.Invoke(attackerTransform);
-
 			if (IsDead)
 			{
 				OnDeath?.Invoke();
