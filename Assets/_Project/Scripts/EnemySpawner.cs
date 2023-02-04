@@ -11,18 +11,20 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform _target;
 
     private float _spawnRate;
-    private float _minspawnPos ;
+    private float _minspawnPos;
+    private float _maxspawnPos;
 
     void Start()
     {
         StartCoroutine(SpawnEnemy());
-        _minspawnPos = _spawnPos.x - 5;
+        _minspawnPos = _spawnPos.x - 11;
+        _maxspawnPos = _spawnPos.x + 11;
     }
 
     IEnumerator SpawnEnemy()
     {
         _spawnPos = gameObject.transform.position;
-        _spawnPos.x = Random.Range(-_minspawnPos, _spawnPos.x);
+        _spawnPos.x = Random.Range(_minspawnPos, _maxspawnPos);
         _spawnRate = Random.Range(0.2f, 2.0f);
         GameObject enemy = Instantiate(_enemies[0], _spawnPos, Quaternion.identity);
         enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;

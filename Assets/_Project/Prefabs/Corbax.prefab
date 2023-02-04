@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -8779587204603697340}
   - component: {fileID: 1206720817}
   - component: {fileID: -7082035590594423970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Corbax
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,5 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d35ea6255cba8eb4790d1e88d8752f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealthPoints: 1
+  _maxHealthPoints: 2
   _healthPoints: 0
+  _destroyWhenKilled: 1

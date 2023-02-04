@@ -12,7 +12,7 @@ namespace GlobalGameJam
 		[Tag]
 		private string[] _tagsToHit;
 
-		private void OnCollisionStay2D(Collision2D col)
+		private void OnCollisionEnter2D(Collision2D col)
 		{
 			if (!col.collider.TryGetComponent(out Health health)) return;
 
@@ -20,7 +20,7 @@ namespace GlobalGameJam
 			foreach (string collisionTag in _tagsToHit)
 			{
 				if (!col.collider.CompareTag(collisionTag)) continue;
-
+				print("TOuCHé");
 				health.Hurt(_damageAmount, transform);
 				return;
 			}
