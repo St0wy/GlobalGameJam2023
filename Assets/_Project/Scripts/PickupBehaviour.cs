@@ -25,11 +25,15 @@ namespace GlobalGameJam
 		[SerializeField]
 		private Slider _slider;
 
+		[SerializeField] 
+		private Score _playerScore;
+
 		private PlayerControls _playerControls;
 		private bool _isPickuping;
 		private GameObject _pickupItem;
 		private bool _isPickupingCadavre = false;
 		private Health _playerHealth;
+		private int _pickupScore = 50;
 
 		private void Awake()
 		{
@@ -57,12 +61,14 @@ namespace GlobalGameJam
 			if (_isPickupingCadavre)
 			{
 				_playerHealth.HealPlayer(_healAmount);
+				_playerScore.IncrementScore(_pickupScore);
 				_isPickuping = false;
 				_isPickupingCadavre = false;
 			}
 			else
 			{
 				_playerControls.AddAmmo(_pickupAmount);
+				_playerScore.IncrementScore(_pickupScore);
 				_isPickuping = false;
 			}
 
