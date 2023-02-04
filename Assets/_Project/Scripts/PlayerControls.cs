@@ -25,6 +25,13 @@ namespace GlobalGameJam
 		[SerializeField]
 		private Transform _maxRight;
 
+		[SerializeField]
+		private int _maxAmmo;
+
+		[ReadOnly]
+		[SerializeField]
+		private int _ammo;
+
 		private Rigidbody2D _rb;
 		private Vector2 _moveDirection;
 		private Vector2 _shootDirection;
@@ -46,12 +53,16 @@ namespace GlobalGameJam
 			}
 		}
 
+		public int Ammo => _ammo;
 		private bool CanShoot => _shootTimer <= 0f;
 
 		private void Awake()
 		{
 			_mainCam = Camera.main;
 			_rb = GetComponent<Rigidbody2D>();
+
+			// TODO : Remove
+			_ammo = _maxAmmo;
 		}
 
 		private void Update()
@@ -98,6 +109,8 @@ namespace GlobalGameJam
 
 		private void Shoot(Vector2 direction)
 		{
+			if (_ammo <= 0) return;
+
 			if (!_mousePressed)
 				_shootDirection = Vector2.zero;
 
@@ -105,6 +118,7 @@ namespace GlobalGameJam
 			GameObject projectile = Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
 			var behaviour = projectile.GetComponent<ProjectileBehaviour>();
 			behaviour.Shoot(direction);
+			_ammo -= 1;
 		}
 
 		private void ApplyMovements()
