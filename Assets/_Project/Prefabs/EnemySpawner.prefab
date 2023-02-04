@@ -101,3 +101,5 @@ MonoBehaviour:
   - {fileID: 8641569713992341583, guid: 2e3dfd0113ca55e4c86ab6e23c2f03b8, type: 3}
   _spawnPos: {x: 0, y: 0}
   _target: {fileID: 0}
+  _minSpawnRate: 1
+  _maxSpawnRate: 3
