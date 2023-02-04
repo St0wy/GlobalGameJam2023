@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealthPoints: 10
   _healthPoints: 0
+  _destroyWhenKilled: 0
 --- !u!114 &103384497
 MonoBehaviour:
   m_ObjectHideFlags: 0
