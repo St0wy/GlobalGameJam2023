@@ -11,11 +11,12 @@ namespace GlobalGameJam
     {
         // Start is called before the first frame update
         [SerializeField] private List<AudioClip> _audioClips;
-        private AudioSource _audioSource;
+        [SerializeField] private AudioSource _audioSource;
 
         private void Awake()
         {
-            _audioSource = GetComponent<AudioSource>();
+            if (!_audioSource)
+                _audioSource = GetComponent<AudioSource>();
         }
 
         public void Play()
