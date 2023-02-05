@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemToDrop: {fileID: 4998046192634972056, guid: 137cd17e7d99d6b408b8d002fead4ac8, type: 3}
-  _dropChance: 30
+  _dropChance: 10
 --- !u!82 &5031941235161277239
 AudioSource:
   m_ObjectHideFlags: 0
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClips:
   - {fileID: 8300000, guid: 7b83abfb61bd96b46888c45c51b4290e, type: 3}
+  _audioSource: {fileID: 0}
 --- !u!114 &5103513518717139329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioPlayer: {fileID: 4086265149512043050}
+  _cam: {fileID: 0}
 --- !u!58 &3975877392055190192
 CircleCollider2D:
   m_ObjectHideFlags: 0
