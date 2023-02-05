@@ -30,6 +30,7 @@ namespace GlobalGameJam
 			_maxSpawnPos = _spawnPos.x + 11;
 		}
 
+		// ReSharper disable Unity.PerformanceAnalysis
 		private IEnumerator SpawnEnemy()
 		{
 			_spawnPos = gameObject.transform.position;
