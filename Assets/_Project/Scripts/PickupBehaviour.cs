@@ -7,8 +7,7 @@ namespace GlobalGameJam
 	[RequireComponent(typeof(AudioPlayer))]
 	public class PickupBehaviour : MonoBehaviour
 	{
-		[SerializeField]
-		private float _pickupDuration = 1f;
+		public float _pickupDuration = 0.7f;
 
 		[SerializeField]
 		private int _pickupAmount = 4;
