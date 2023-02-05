@@ -12,7 +12,9 @@ namespace GlobalGameJam
 			Teenager = 1,
 			Adult = 2,
 		}
-
+		
+		[SerializeField] private AudioPlayer _audioPlayer;
+		
 		[SerializeField]
 		private int _scoreUpgradeOne = 3000;
 
@@ -39,10 +41,12 @@ namespace GlobalGameJam
 			    _oldScore < _scoreUpgradeOne)
 			{
 				State = UpgradeState.Teenager;
+				_audioPlayer.Play();
 			}
 			else if (_score.PlayerScore >= _scoreUpgradeTwo && _oldScore < _scoreUpgradeTwo)
 			{
 				State = UpgradeState.Adult;
+				_audioPlayer.Play();
 			}
 
 			_animator.SetInteger(PlayerUpgradeState, (int) State);
