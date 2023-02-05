@@ -1,64 +1,62 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace GlobalGameJam
 {
-    public class ScreenShake : MonoBehaviour
-    {
-        private float shakeDuration;
-        private float shakeMagnitude;
-        public float defaultDuration;
-        public float defaultMagnitude;
-        public Vector3 initialPosition;
-        private bool keepShaking = false;
+	public class ScreenShake : MonoBehaviour
+	{
+		public float defaultDuration;
+		public float defaultMagnitude;
+		public Vector3 initialPosition;
 
-        void OnEnable()
-        {
-            initialPosition = transform.localPosition;
-        }
+		private float _shakeDuration;
+		private float _shakeMagnitude;
+		private bool _keepShaking = false;
 
-        void FixedUpdate()
-        {
-            if (shakeDuration > 0 || keepShaking)
-            {
-                transform.localPosition = initialPosition + Random.insideUnitSphere * (shakeMagnitude * Time.deltaTime);
+		private void OnEnable()
+		{
+			initialPosition = transform.localPosition;
+		}
 
-                shakeDuration -= Time.deltaTime;
-            }
-            else
-            {
-                shakeDuration = 0f;
-                transform.localPosition = initialPosition;
-            }
-        }
+		private void FixedUpdate()
+		{
+			if (_shakeDuration > 0 || _keepShaking)
+			{
+				transform.localPosition =
+					initialPosition + Random.insideUnitSphere * (_shakeMagnitude * Time.deltaTime);
 
-        public void TriggerShake(float magnitude, float duration)
-        {
-            shakeMagnitude = magnitude;
-            shakeDuration = duration;
-        }
+				_shakeDuration -= Time.deltaTime;
+			}
+			else
+			{
+				_shakeDuration = 0f;
+				transform.localPosition = initialPosition;
+			}
+		}
 
-        public void TriggerShake()
-        {
-            shakeMagnitude = defaultMagnitude;
-            keepShaking = true;
-        }
+		public void TriggerShake(float magnitude, float duration)
+		{
+			_shakeMagnitude = magnitude;
+			_shakeDuration = duration;
+		}
 
-        public void StopShaking()
-        {
-            keepShaking = false;
-            shakeDuration = 0;
-        }
+		public void TriggerShake()
+		{
+			_shakeMagnitude = defaultMagnitude;
+			_keepShaking = true;
+		}
 
-        [MyBox.ButtonMethod]
-        public void TriggerShortShake()
-        {
-            shakeMagnitude = defaultMagnitude;
-            shakeDuration = defaultDuration;
-        }
-    }
+		public void StopShaking()
+		{
+			_keepShaking = false;
+			_shakeDuration = 0;
+		}
+
+		[MyBox.ButtonMethod]
+		public void TriggerShortShake()
+		{
+			_shakeMagnitude = defaultMagnitude;
+			_shakeDuration = defaultDuration;
+		}
+	}
 }

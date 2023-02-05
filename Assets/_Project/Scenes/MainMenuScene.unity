@@ -2101,8 +2101,8 @@ MonoBehaviour:
   _optionsMenu: {fileID: 404608725}
   _gameScene:
     Scene: {fileID: 102900000, guid: 5abb451ed8906a64bbfe6ee6610508f3, type: 3}
-    SceneName: "Scene de Andr\xE9 de Ludo de Fabian de Ludo de Fabian"
-    sceneIndex: 4
+    SceneName: "Scene de Fabiande Andr\xE9 de Ludo de Fabian de Ludo de Fabian"
+    sceneIndex: 3
     sceneEnabled: 1
 --- !u!1 &1698897797
 GameObject:
