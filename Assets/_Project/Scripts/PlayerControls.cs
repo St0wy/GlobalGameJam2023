@@ -153,6 +153,8 @@ namespace GlobalGameJam
 			var behaviour = projectile.GetComponent<ProjectileBehaviour>();
 			behaviour.Shoot(direction);
 			_ammo -= 1;
+			_audioPlayer.GetComponent<AudioSource>();
+			_audioPlayer._audioSource.volume = 0.3f;
 			_audioPlayer.Play();
 		}
 
