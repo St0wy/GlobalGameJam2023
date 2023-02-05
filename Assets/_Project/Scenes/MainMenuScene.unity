@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'WASD / Left Stick : Movement
+  m_text: 'AD / Left Stick : Movement
 
     Left Click / Right Stick : Shoot
 
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   _gameScene:
     Scene: {fileID: 102900000, guid: d6a3c2b9ae801bc4fa4a646bd37fa62f, type: 3}
     SceneName: 21
-    sceneIndex: 4
+    sceneIndex: 1
     sceneEnabled: 1
 --- !u!82 &1589431324
 AudioSource:
