@@ -36,5 +36,6 @@ namespace GlobalGameJam
 			_audioPlayer.Play();
 			Cam.TriggerShortShake();
 		}
+		
 	}
 }

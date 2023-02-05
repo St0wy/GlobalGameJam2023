@@ -41,7 +41,7 @@ namespace GlobalGameJam.UI
 		public void GoToMainMenu()
 		{
 			Time.timeScale = 1f;
-			_mainMenuScene.LoadScene();
+			_mainMenuScene.LoadSceneAsync();
 		}
 	}
 }
