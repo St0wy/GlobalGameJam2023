@@ -1340,9 +1340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameScene:
-    Scene: {fileID: 102900000, guid: 5abb451ed8906a64bbfe6ee6610508f3, type: 3}
-    SceneName: "Scene de Fabiande Andr\xE9 de Ludo de Fabian de Ludo de Fabian"
-    sceneIndex: 3
+    Scene: {fileID: 102900000, guid: d6a3c2b9ae801bc4fa4a646bd37fa62f, type: 3}
+    SceneName: 21
+    sceneIndex: 4
     sceneEnabled: 1
 --- !u!1 &1913039817
 GameObject:
