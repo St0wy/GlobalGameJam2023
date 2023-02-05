@@ -1,4 +1,5 @@
 ﻿using MyBox;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,8 @@ namespace GlobalGameJam.UI
 		[SerializeField]
 		private SceneReference _mainMenuScene;
 
+		[SerializeField] private AudioSource _sounds;
+
 		private void OnEnable()
 		{
 			_playerHealth.OnDeath += OnDeath;
@@ -33,6 +36,7 @@ namespace GlobalGameJam.UI
 
 		private void OnDeath()
 		{
+			_sounds.mute = true;
 			_gameOverUI.SetActive(true);
 			_mainMenuButton.Select();
 			Time.timeScale = 0f;
@@ -41,7 +45,7 @@ namespace GlobalGameJam.UI
 		public void GoToMainMenu()
 		{
 			Time.timeScale = 1f;
-			_mainMenuScene.LoadSceneAsync();
+			_mainMenuScene.LoadScene();
 		}
 	}
 }
