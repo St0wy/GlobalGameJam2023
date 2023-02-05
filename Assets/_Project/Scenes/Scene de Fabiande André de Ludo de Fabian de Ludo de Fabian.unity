@@ -693,6 +693,14 @@ PrefabInstance:
       propertyPath: _cam
       value: 
       objectReference: {fileID: 519420033}
+    - target: {fileID: 1172841066, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
+      propertyPath: _scoreUpgradeOne
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172841066, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
+      propertyPath: _scoreUpgradeTwo
+      value: 900000
+      objectReference: {fileID: 0}
     - target: {fileID: 1322051435, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
       propertyPath: m_Camera
       value: 

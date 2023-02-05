@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 101
+  controlID: 16308
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -88,7 +88,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 102
+  controlID: 16309
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 103
+  controlID: 16310
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 198.85715
     height: 404
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 92730000
-      m_LastClickedID: 29586
-      m_ExpandedIDs: 96f8ffffd8faffff92730000
+      m_SelectedIDs: 600dffff
+      m_LastClickedID: -62112
+      m_ExpandedIDs: 9e0fffff0611ffffac11ffffcc14ffffd814ffff821affff5c1cffff683cffffb651ffff96f8ffffd8faffff9273000026aa000042aa000082aa0000a6aa000062ad000076ad000096ad0000b0ad00009cb40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -563,9 +563,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.9876666, y: -2.9161758, z: -10.093677}
+    m_Target: {x: 580.8738, y: 518.9411, z: 8.377099}
     speed: 2
-    m_Value: {x: 2.9876666, y: -2.9161758, z: -10.093677}
+    m_Value: {x: 635.5663, y: 506.23572, z: 8.137558}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -616,9 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.873134
+    m_Target: 508.36362
     speed: 2
-    m_Value: 5.873134
+    m_Value: 532.31793
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   - {fileID: 15}
   - {fileID: 16}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1386,22 +1386,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Project/Prefabs
+    - Assets/_Project/Fonts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/_Project/Prefabs
+  - Assets/_Project/Fonts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\dev\unity\GlobalGameJam2023
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 86.42859}
-    m_SelectedIDs: 20730000
-    m_LastClickedID: 29472
-    m_ExpandedIDs: 0000000014730000167300002873000000ca9a3b
+    scrollPos: {x: 0, y: 54.42859}
+    m_SelectedIDs: 1e730000
+    m_LastClickedID: 29470
+    m_ExpandedIDs: 00000000147300001673000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1429,7 +1429,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 000000001473000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1454,21 +1454,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 92730000
-    m_LastClickedInstanceID: 29586
+    m_SelectedInstanceIDs: 600dffff
+    m_LastClickedInstanceID: -62112
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000347d0000a2d30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: idle tree 1
-      m_OriginalName: idle tree 1
+      m_Name: "Scene de Fabiande Andr\xE9 de Ludo de Fabian de Ludo de Fabian"
+      m_OriginalName: "Scene de Fabiande Andr\xE9 de Ludo de Fabian de Ludo de Fabian"
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 36666
+      m_UserData: 29486
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -1563,8 +1563,8 @@ MonoBehaviour:
     y: 0
     width: 348.5714
     height: 682.5714
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}

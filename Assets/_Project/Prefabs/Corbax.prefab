@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemToDrop: {fileID: 4998046192634972056, guid: 137cd17e7d99d6b408b8d002fead4ac8, type: 3}
-  _dropChance: 10
+  _dropChance: 5
 --- !u!82 &5031941235161277239
 AudioSource:
   m_ObjectHideFlags: 0
