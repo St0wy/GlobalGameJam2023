@@ -133,7 +133,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6865736318571668908, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
   m_PrefabInstance: {fileID: 824775835}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1172841052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d35ea6255cba8eb4790d1e88d8752f1e, type: 3}
@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -450,6 +451,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41669f16a1e89f74aa75b692f98a7b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDuration: 0
+  defaultMagnitude: 0
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 103384500, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
+      propertyPath: _cam
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 898347040, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
       propertyPath: _playerScore
       value: 
@@ -867,7 +887,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2447439434396594742, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
   m_PrefabInstance: {fileID: 824775835}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1172841052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfb4a1035d9e37a45be3b1ffcb7255d9, type: 3}
@@ -878,12 +898,31 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9060297854393986142, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
   m_PrefabInstance: {fileID: 824775835}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1172841052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef8c0b3104426164789baddec634a610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1172841052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4431910613377712639, guid: ac06d2108be2a16468d70553a889a6f0, type: 3}
+  m_PrefabInstance: {fileID: 824775835}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1172841066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172841052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf7f167774f4ec7b8b52f4f0fbd5f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreUpgradeOne: 3000
+  _scoreUpgradeTwo: 6000
 --- !u!1001 &1368256719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -991,6 +1030,10 @@ PrefabInstance:
       propertyPath: _score
       value: 
       objectReference: {fileID: 1159857243}
+    - target: {fileID: 2467433431277126817, guid: 4412266793f82f742876db78c7262fea, type: 3}
+      propertyPath: _shaker
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 2467433431277126817, guid: 4412266793f82f742876db78c7262fea, type: 3}
       propertyPath: _target
       value: 
