@@ -14,6 +14,8 @@ namespace GlobalGameJam
 		[SerializeField] private Score _score;
 		[SerializeField] private float _minSpawnRate = 0.2f;
 		[SerializeField] private float _maxSpawnRate = 2f;
+		[MustBeAssigned]
+		[SerializeField] private ScreenShake _shaker;
 
 		[MustBeAssigned] [SerializeField] private Transform _downLimit;
 
@@ -38,6 +40,7 @@ namespace GlobalGameJam
 			enemy.GetComponent<EnemyMovement>().PlayerTransform = _target;
 			enemy.GetComponent<CorbaxDrop>().DownLimit = _downLimit;
 			enemy.GetComponent<ScoreOnDeathBehaviour>().Score = _score;
+			enemy.GetComponent<PlaySoundOnHurtBehaviour>().Cam = _shaker;
 
 			yield return new WaitForSeconds(_spawnRate);
 			StartCoroutine(SpawnEnemy());

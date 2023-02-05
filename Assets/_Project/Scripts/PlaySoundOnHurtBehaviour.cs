@@ -1,34 +1,43 @@
 ﻿using System;
+using MyBox;
 using UnityEngine;
 
 namespace GlobalGameJam
 {
-	[RequireComponent(typeof(AudioPlayer), typeof(Health))]
-	public class PlaySoundOnHurtBehaviour : MonoBehaviour
-	{
-		[SerializeField]
-		private AudioPlayer _audioPlayer;
-		private Health _health;
+    [RequireComponent(typeof(AudioPlayer), typeof(Health))]
+    public class PlaySoundOnHurtBehaviour : MonoBehaviour
+    {
+        [SerializeField] private AudioPlayer _audioPlayer;
+        [MustBeAssigned] [SerializeField] private ScreenShake _cam;
+        private Health _health;
 
-		private void Awake()
-		{
-			// _audioPlayer = GetComponent<AudioPlayer>();
-			_health = GetComponent<Health>();
-		}
+        public ScreenShake Cam
+        {
+            get => _cam;
+            set => _cam = value;
+        }
 
-		private void OnEnable()
-		{
-			_health.OnHurt += OnHurt;
-		}
+        private void Awake()
+        {
+            // _audioPlayer = GetComponent<AudioPlayer>();
+            _health = GetComponent<Health>();
+            // _cam = GetComponent<ScreenShake>();
+        }
 
-		private void OnDisable()
-		{
-			_health.OnHurt -= OnHurt;
-		}
+        private void OnEnable()
+        {
+            _health.OnHurt += OnHurt;
+        }
 
-		private void OnHurt(Transform _)
-		{
-			_audioPlayer.Play();
-		}
-	}
+        private void OnDisable()
+        {
+            _health.OnHurt -= OnHurt;
+        }
+
+        private void OnHurt(Transform _)
+        {
+            _audioPlayer.Play();
+            Cam.TriggerShortShake();
+        }
+    }
 }

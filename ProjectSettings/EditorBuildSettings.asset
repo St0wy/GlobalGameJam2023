@@ -8,10 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/MainMenuScene.unity
     guid: cdb8dc33dd3d67f488275ef6d014fed6
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/SceneLudoDeFabian.unity
     guid: 0711134d0423d414dbe71a381ac34958
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Project/Scenes/SceneFabian.unity
     guid: 48ffdc5dee8008940b337817fe42e98d
+  - enabled: 1
+    path: "Assets/_Project/Scenes/Scene de Fabiande Andr\xE9 de Ludo de Fabian de
+      Ludo de Fabian.unity"
+    guid: 5abb451ed8906a64bbfe6ee6610508f3
   m_configObjects: {}
