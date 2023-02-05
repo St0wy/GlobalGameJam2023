@@ -11,7 +11,7 @@ namespace GlobalGameJam
 
 		private float _shakeDuration;
 		private float _shakeMagnitude;
-		private bool _keepShaking = false;
+		private bool _keepShaking;
 
 		private void OnEnable()
 		{

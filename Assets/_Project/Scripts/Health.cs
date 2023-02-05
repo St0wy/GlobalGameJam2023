@@ -1,4 +1,3 @@
-using System;
 using MyBox;
 using UnityEngine;
 
@@ -53,16 +52,14 @@ namespace GlobalGameJam
 			_healthPoints -= hurtAmount;
 			OnHurt?.Invoke(attackerTransform);
 
-			if (IsDead)
-			{
-				OnDeath?.Invoke();
-				if (_destroyWhenKilled)
-				{
-					_rb.ToggleConstraints(RigidbodyConstraints2D.FreezePositionX, true);
-					_rb.ToggleConstraints(RigidbodyConstraints2D.FreezePositionY, true);
-					Destroy(gameObject, 0.2f);
-				}
-			}
+			if (!IsDead) return;
+
+			OnDeath?.Invoke();
+			if (!_destroyWhenKilled) return;
+
+			_rb.ToggleConstraints(RigidbodyConstraints2D.FreezePositionX, true);
+			_rb.ToggleConstraints(RigidbodyConstraints2D.FreezePositionY, true);
+			Destroy(gameObject, 0.2f);
 		}
 	}
 }

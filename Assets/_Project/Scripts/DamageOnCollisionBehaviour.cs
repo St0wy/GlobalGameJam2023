@@ -1,5 +1,4 @@
-﻿using System;
-using MyBox;
+﻿using MyBox;
 using UnityEngine;
 
 namespace GlobalGameJam
@@ -12,10 +11,6 @@ namespace GlobalGameJam
 		[SerializeField]
 		[Tag]
 		private string[] _tagsToHit;
-		
-		private void Start()
-		{
-		}
 
 		private void OnCollisionEnter2D(Collision2D col)
 		{

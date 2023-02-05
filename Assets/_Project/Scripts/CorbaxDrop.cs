@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using MyBox;
 using UnityEngine;
 
 namespace GlobalGameJam
@@ -41,8 +38,8 @@ namespace GlobalGameJam
 					cadavreBehaviour.DownLimit = DownLimit;
 				}
 			}
-			
-			
+
+
 			Destroy(gameObject, 0.2f);
 		}
 	}

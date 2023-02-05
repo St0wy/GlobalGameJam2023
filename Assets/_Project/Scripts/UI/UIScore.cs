@@ -13,7 +13,7 @@ namespace GlobalGameJam.UI
 			_text = GetComponent<TextMeshProUGUI>();
 		}
 
-		void Update()
+		private void Update()
 		{
 			_text.text = $"Score: {_playerScore.PlayerScore}";
 		}

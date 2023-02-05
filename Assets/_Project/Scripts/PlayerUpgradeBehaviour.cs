@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GlobalGameJam
 {
@@ -12,9 +11,9 @@ namespace GlobalGameJam
 			Teenager = 1,
 			Adult = 2,
 		}
-		
+
 		[SerializeField] private AudioPlayer _audioPlayer;
-		
+
 		[SerializeField]
 		private int _scoreUpgradeOne = 3000;
 

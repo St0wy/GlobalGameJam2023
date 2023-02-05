@@ -25,15 +25,18 @@ namespace GlobalGameJam
 		[SerializeField]
 		private Slider _slider;
 
-		[SerializeField] 
+		[SerializeField]
 		private Score _playerScore;
+
+		[SerializeField]
+		private int _pickupScore = 50;
 
 		private PlayerControls _playerControls;
 		private bool _isPickuping;
 		private GameObject _pickupItem;
-		private bool _isPickupingCadavre = false;
+		private bool _isPickupingCadavre;
 		private Health _playerHealth;
-		private int _pickupScore = 50;
+
 
 		private void Awake()
 		{

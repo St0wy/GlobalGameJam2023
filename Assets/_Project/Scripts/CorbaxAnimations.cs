@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GlobalGameJam
 {
@@ -32,7 +31,7 @@ namespace GlobalGameJam
 			_health.OnHurt += OnHurt;
 			_health.OnDeath += OnDeath;
 		}
-		
+
 		private void OnDisable()
 		{
 			_health.OnHurt -= OnHurt;
@@ -43,7 +42,7 @@ namespace GlobalGameJam
 		{
 			_animator.SetTrigger(Hurt);
 		}
-		
+
 		private void OnDeath()
 		{
 			_animator.SetTrigger(Dead);

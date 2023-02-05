@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GlobalGameJam
 {
@@ -9,13 +8,11 @@ namespace GlobalGameJam
 		[SerializeField]
 		private float _knockbackForce = 10f;
 
-		private Rigidbody2D _rigidbody;
 		private Health _health;
 		private PlayerControls _playerControls;
 
 		private void Awake()
 		{
-			_rigidbody = GetComponent<Rigidbody2D>();
 			_health = GetComponent<Health>();
 			_playerControls = GetComponent<PlayerControls>();
 		}

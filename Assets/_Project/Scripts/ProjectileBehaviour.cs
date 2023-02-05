@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace GlobalGameJam
@@ -31,7 +30,7 @@ namespace GlobalGameJam
 			_rigidbody.velocity = direction * _movementSpeed;
 		}
 
-		private void OnCollisionEnter2D(Collision2D collision)
+		private void OnCollisionEnter2D()
 		{
 			Destroy(gameObject);
 		}

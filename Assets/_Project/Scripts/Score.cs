@@ -4,17 +4,16 @@ namespace GlobalGameJam
 {
 	public class Score : MonoBehaviour
 	{
-		private int _playerScore;
-		public int PlayerScore => _playerScore;
+		public int PlayerScore { get; private set; }
 
 		private void Start()
 		{
-			_playerScore = 0;
+			PlayerScore = 0;
 		}
 
 		public void IncrementScore(int value)
 		{
-			_playerScore += value;
+			PlayerScore += value;
 		}
 	}
 }
