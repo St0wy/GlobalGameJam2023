@@ -41,8 +41,9 @@ namespace GlobalGameJam
 					cadavreBehaviour.DownLimit = DownLimit;
 				}
 			}
-
-			Destroy(gameObject);
+			
+			
+			Destroy(gameObject, 0.2f);
 		}
 	}
 }

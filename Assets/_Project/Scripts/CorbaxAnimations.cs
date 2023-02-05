@@ -10,8 +10,8 @@ namespace GlobalGameJam
 		private Health _health;
 		private Rigidbody2D _rigidbody;
 
-		private static readonly int Speed = Animator.StringToHash("Speed");
 		private static readonly int Hurt = Animator.StringToHash("Hurt");
+		private static readonly int Dead = Animator.StringToHash("Dead");
 
 		private void Awake()
 		{
@@ -30,16 +30,23 @@ namespace GlobalGameJam
 		private void OnEnable()
 		{
 			_health.OnHurt += OnHurt;
+			_health.OnDeath += OnDeath;
 		}
-
+		
 		private void OnDisable()
 		{
 			_health.OnHurt -= OnHurt;
+			_health.OnDeath -= OnDeath;
 		}
 
 		private void OnHurt(Transform _)
 		{
 			_animator.SetTrigger(Hurt);
+		}
+		
+		private void OnDeath()
+		{
+			_animator.SetTrigger(Dead);
 		}
 	}
 }
